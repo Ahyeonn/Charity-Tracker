@@ -46,7 +46,7 @@ def feed_edit(feed_id):
 
 @app.route('/charities/<feed_id>', methods=['POST'])
 def feed_update(feed_id):
-    """Submit an edited donation by a user."""
+    """Update an edited donation history of a user."""
     updated_feed = {
             'feed_date': request.form.get('feed_date'),
             'feed_donation': request.form.get('feed_donation'),
@@ -56,3 +56,9 @@ def feed_update(feed_id):
         {'_id': ObjectId(feed_id)},
         {'$set': updated_feed})
     return redirect(url_for('feed_show', feed_id=feed_id))
+
+@app.route('/charities/<feed_id>/delete', methods=['POST'])
+def feed_delete(feed_id):
+    """Delete donation history."""
+    charities.delete_one({'_id': ObjectId(feed_id)})
+    return redirect(url_for('feed_index_new'))

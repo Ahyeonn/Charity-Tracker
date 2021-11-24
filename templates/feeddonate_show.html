@@ -20,11 +20,11 @@
             </div>
         </div>
         <div class="d-flex justify-content-center align-items-center px-3" style="height: 30px; ">
-            <button type='submit' class="form-control bg-white fw-bold border-dark" style="width:85px; font-size: 13px;"><a href="/charities/{{ feed._id }}/edit">UPDATE</a></button>
+            <button type='submit' class="form-control border-dark" style="width:85px; font-size: 13px;"><a class="fw-bold text-dark text-decoration-none" href="/charities/{{ feed._id }}/edit">UPDATE</a></button>
         </div>
-        <div class="d-flex justify-content-center align-items-center px-2" style="height: 30px;">
+        <form method='POST' action='/charities/{{ feed._id }}/delete' class="d-flex justify-content-center align-items-center px-2" style="height: 30px;">
             <button type='submit' class="form-control bg-white fw-bold border-dark" style="width:85px; font-size: 13px;">DELETE</button>
-        </div>
+        </form>
     </div>
 </div>
 {% endblock %}
