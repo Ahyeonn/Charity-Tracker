@@ -1,0 +1,56 @@
+<!-- templates/playlists_index.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div style=" border-top: solid; height: 100%; border-color: rgb(211, 209, 211); border-width: 3px; width: 100%;" class="d-flex flex-column align-items-center">
+    <div class="pt-5 d-flex flex-column align-items-center col-sm-12 col-2">
+        <div class="d-flex justify-content-center align-items-center bg-light border" style="height: 100px; width: 350px;">
+            <h2 style="font-size: 50px; color: rgb(85, 83, 83);">Donation</h2>
+        </div>
+    </div>
+    <div class="pt-5">
+        <form method='POST' action='/feeddonate'>
+            <h3 class="pb-4" style="font-size:40px;"><a style="color: rgb(123, 123, 126)" class="text-decoration-none" href="./new">Feed My Starving Children</a></h3>
+            <div class="d-flex flex-row">
+                <img height="280px" src="/static/css/images/feed.jpeg" alt="" width="420px" class="border-top border-bottom border-start">
+                <div class="border bg-light d-flex flex-column justify-content-center" style="height: 280px; width: 800px;">
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex flex-column">
+                            <p class="d-flex align-items-center justify-content-center fw-bold ms-5" style="font-size: 20px;">Choose a one-time amount</p>
+                            <div style="height: 120px;" class="ms-5 d-flex justify-content-center align-items-center flex-column">
+                                <div class="input-group ms-4" style="width: 300px;">
+                                    <span class="input-group-text">$</span>
+                                    <input type="number" class="form-control" name="feed_donation" min="0" step="0.01" value="0.00">
+                                </div>
+                                <div style="width: 365px;">
+                                    <p class="fw-bold d-flex justify-content-center mt-2 m-2" style="width: 365px; font-size: 20px;">Name</p>
+                                    <input style="width: 300px;" class="form-control ms-5 d-flex justify-content-center" type="text" id="name" name="feed_name" placeholder="Name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center flex-column" style="height: 177px;">
+                            <p class="fw-bold m-0 d-flex align-items-center" style="font-size: 20px; height: 50px; padding-left: 48px;">Select Date</p>
+                            <input style="width: 300px;" class="form-control ms-5 d-flex justify-content-center" name="feed_date" type="date" id="start" value="2021-11-17" min="2021-11-17" max="2031-12-31">
+                        </div>
+                    </div>
+                      <div class="d-flex flex-row justify-content-center mt-3">
+                        <button type='submit' class="form-control bg-white fw-bold border-dark" style="width:100px">DONATE</button>
+                        <!-- <button type="submit" class="form-control bg-white fw-bold border-dark ms-3" name="feed_history" style="width:100px">HISTORY</button> -->
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <h3 class="py-4" style="font-size:40px;"><a style="color: rgb(123, 123, 126)" class="text-decoration-none" href="./new">Donors</a></h3>
+        {% for feed in charities %}
+        <div class="d-flex flex-column justify-content-center pt-3" style="border-color: rgb(211, 209, 211); height: 100%; font-size: 20px;">
+            <div class="d-flex flex-row justify-content-center">
+                <p class="fw-bold">Name:</p>
+                <p class="px-3"><a class="text-decoration-none" href='/charities/{{ feed._id }}'>{{ feed.feed_name }}</a></p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>   
+</div> 
+
+{% endblock %}

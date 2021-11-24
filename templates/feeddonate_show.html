@@ -1,0 +1,30 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="d-flex justify-content-around">
+  <h3 class="pt-5 d-flex" style="font-size:20px;"><a style="color: rgb(123, 123, 126)" class="text-decoration-none fw-bold" href="/feeddonate">BACK</a></h3>
+  <p class="d-flex" style="font-size:40px;"><a style="color: rgb(123, 123, 126)" class="text-decoration-none" href="/charityfeed">Donation History</p>
+</div>
+<div class="d-flex flex-column justify-content-center pt-3" style="border-top:solid;  border-color: rgb(211, 209, 211); height: 100%; font-size: 20px;">
+    <div class="d-flex flex-row justify-content-center">
+        <div class="d-flex">
+            <p class="fw-bold">{{ feed.feed_name }}</p>
+            <div class="d-flex px-5">
+                <p class="fw-bold">Donated Amount:</p>
+                <p class="px-3">${{ feed.feed_donation }}</p>
+            </div>
+            <div class="d-flex">
+                <p class="fw-bold">Donated on:</p>
+                <p class="px-3">{{ feed.feed_date }}</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center px-3" style="height: 30px; ">
+            <button type='submit' class="form-control bg-white fw-bold border-dark" style="width:85px; font-size: 13px;">UPDATE</button>
+        </div>
+        <div class="d-flex justify-content-center align-items-center px-2" style="height: 30px;">
+            <button type='submit' class="form-control bg-white fw-bold border-dark" style="width:85px; font-size: 13px;">DELETE</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
