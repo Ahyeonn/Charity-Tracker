@@ -6,24 +6,24 @@
     <p class="d-flex" style="font-size:40px;"><a style="color: rgb(123, 123, 126)" class="text-decoration-none">{{ title }}</p>
 </div>
 <div class="d-flex flex-column justify-content-center pt-3" style="border-top:solid;  border-color: rgb(211, 209, 211); height: 100%; font-size: 20px;">
-    <form method='POST' action='/feed/{{feed._id}}'>
+    <form method='POST' action='/home/{{home._id}}'>
         <input type='hidden' name='_method' value='PUT'/>
         <div class="d-flex flex-row justify-content-center">
             <div class="d-flex">
                 <div class='form-group d-flex align-items-center'>
                     <p class="fw-bold m-0">Name:</p>
-                    <input class="px-3 ms-3" name='feed_name' value='{{ feed.feed_name }}'>
+                    <input class="px-3 ms-3" name='home_name' value='{{ home.home_name }}'>
                 </div>
                 <div class='form-group'>
                     <div class="d-flex px-3 align-items-center">
                         <p class="fw-bold m-0">Donated Amount:</p>
-                        <input class="px-3 d-flex ms-3" style='height: 30px;' name='feed_donation' type="number" step="0.01" value='{{ feed.feed_donation }}'>
+                        <input class="px-3 d-flex ms-3" style='height: 30px;' name='home_donation' type="number" step="0.01" value='{{ home.home_donation }}'>
                     </div>
                 </div>
                 <div class='form-group d-flex align-items-center'>
                     <div class="d-flex align-items-center">
                         <p class="fw-bold m-0">Donated on:</p>
-                        <input class="px-3 ms-3" name='feed_date' type="date" value='{{ feed.feed_date }}'>
+                        <input class="px-3 ms-3" name='home_date' type="date" value='{{ home.home_date }}'>
                     </div>
                 </div>
             </div>

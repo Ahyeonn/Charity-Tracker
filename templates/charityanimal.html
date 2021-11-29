@@ -1,0 +1,60 @@
+<!-- templates/playlists_index.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<nav class="navbar navbar-light bg-white p-0 sticky-top">
+    <div class="container-fluid border-2 d-flex justify-content-center border-bottom border-secondary">
+      <div class="pt-3 pb-3 d-flex justify-content-around  fw-bolder" style="width: 1000px;">
+        <a style="font-size: 16px;" class="navbar-brand" href="/charityfeed">CHARITIES</a>
+        <a style="font-size: 16px;" class="navbar-brand" href="/charitylists">MAKE DONATION</a>
+      </div>
+    </div>
+</nav>
+<div class="container-fluid fw-bolder border-2 d-flex justify-content-start border-secondary">
+    <div class="pt-2 d-flex justify-content-center" style="width: 600px;">
+      <a style="font-size: 16px; color: gray;" class="navbar-brand ms-3  d-flex align-items-center" href="/charityfeed">Feed My Starving Children</a>
+      <a style="font-size: 20px; color: rgb(157, 43, 87);" class="navbar-brand ms-3" href="#">Animal Haven</a>
+      <a style="font-size: 16px; color: gray;" class="navbar-brand ms-3 d-flex align-items-center" href="/charityhome">Home for Families</a>
+    </div>
+</div>
+<!-- grid -->
+<div class="container d-flex align-items-center flex-column pt-4">
+    <div class="row">
+      <div style="height: 470px; width: 1425px" class=" border-bottom border-2 border-dark">
+        <div class="d-flex flex-row align-items-center justify-content-center col-sm-12 col-1" style="height: 440px;">
+          <img src="./static/css/images/animalhaven.jpeg" alt="" width="680px">
+          <div style="height: 100px; width: 670px;" class="d-flex flex-column justify-content-center align-items-center bg-white">
+            <p class="fw-bolder" style="font-size: 50px; color: rgb(114, 115, 116);">Animal Haven</p> 
+            <p class="fw-bolder" style="font-size: 30px;">Num people have been donated</p> 
+          </div>
+        </div>
+      </div>
+    <div style="height: 700px; background-color: rgb(228, 222, 217);" class="mt-5 d-flex align-items-center">
+      <div class="d-flex flex-column align-items-center col-sm-12 col-2" style="height: 600px;">
+        <img src="./static/css/images/havenrating.jpeg" alt="" width="530px">
+        <div style="height: 500px; width: 900px;" class="d-flex justify-content-center align-items-center mt-5">
+            <p class="fw-bold text-center" style="font-size: 25px; color: rgb(91, 93, 94);">This charity's score is 100.00, earning it a 4-Star rating. Donors can "Give with Confidence" to this charity.</p> 
+        </div>
+      </div>
+    </div>
+    <div style="height: 300px;" class="mt-5 d-flex align-items-center justify-content-center flex-column bg-light col-sm-12 col-3">
+        <div style="height: 200px; width: 900px;" class="d-flex align-items-center justify-content-center">
+          <p class="fw-bold text-center" style="font-size: 25px; color: rgb(114, 116, 114);">We find homes for abandoned cats and dogs in New York City and throughout the Tri-State area, and provide behavior intervention when needed to improve chances of adoption.</p> 
+        </div>
+    </div>
+        
+    <div style="height: 400px; background-color: rgb(238, 233, 229);" class="mt-5 d-flex align-items-center flex-column col-sm-12 col-4">
+        <div class="d-flex flex-row align-items-center mt-5">
+          <img src="./static/css/images/havenimpact.jpeg" alt="" width="680px" height="300px" class="me-5">
+          <div>
+              <h3 class="fs-2 pb-2" style="color: rgb(91, 93, 94);">Your gift will change a pet's life!</h3>
+              <p class="fs-5" style="color: rgb(76, 78, 78);">At Animal Haven, we work every day to find homes for dogs and cats in crisis. We're committed to providing the best possible care for their specific needs while they wait. You can create hope for them: your donation provides healthy food, comfortable bedding, vital enrichment, training and medical intervention. Donate today!</p>
+          </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center py-5">
+        <button class="form-control bg-white fw-bold  border-dark" style="width:130px; font-size: 20px;"><a class="text-dark text-decoration-none" href="/charitylists">DONATE</a></button>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+<!-- templates/playlists_index.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<nav class="navbar navbar-light bg-white p-0 sticky-top">
+    <div class="container-fluid border-2 d-flex justify-content-center border-bottom border-secondary">
+      <div class="pt-3 pb-3 d-flex justify-content-around  fw-bolder" style="width: 1000px;">
+        <a style="font-size: 16px;" class="navbar-brand" href="/charityfeed">CHARITIES</a>
+        <a style="font-size: 16px;" class="navbar-brand" href="/charitylists">MAKE DONATION</a>
+      </div>
+    </div>
+</nav>
+<div class="container-fluid fw-bolder border-2 d-flex justify-content-start border-secondary">
+    <div class="pt-2 d-flex justify-content-center" style="width: 600px;">
+      <a style="font-size: 16px; color: gray;" class="navbar-brand ms-3 d-flex align-items-center" href="/charityfeed">Feed My Starving Children</a>
+      <a style="font-size: 16px; color: gray;" class="navbar-brand ms-3  d-flex align-items-center" href="/charityanimal">Animal Haven</a>
+      <a style="font-size: 20px; color: rgb(157, 43, 87)" class="navbar-brand ms-3" href="#">Home for Families</a>
+    </div>
+</div>
+<!-- grid -->
+<div class="container d-flex align-items-center flex-column pt-4">
+    <div class="row">
+      <div style="height: 470px; width: 1425px" class=" border-bottom border-2 border-dark">
+        <div class="d-flex flex-row align-items-center justify-content-center col-sm-12 col-1" style="height: 440px;">
+          <img src="./static/css/images/home.jpeg" alt="" width="680px" height="350px">
+          <div style="height: 100px; width: 670px;" class="d-flex flex-column justify-content-center align-items-center bg-white">
+            <p class="fw-bolder" style="font-size: 50px; color: rgb(114, 115, 116);">Home for Families</p>
+            <p class="fw-bolder" style="font-size: 30px;">Num people have been donated</p> 
+          </div>
+        </div>
+      </div>
+    <div style="height: 700px; background-color: rgb(216, 223, 220);" class="mt-5 d-flex align-items-center">
+      <div class="d-flex flex-column align-items-center col-sm-12 col-2" style="height: 600px;">
+        <img src="./static/css/images/homerating.jpeg" alt="" width="530px">
+        <div style="height: 500px; width: 900px;" class="d-flex justify-content-center align-items-center mt-5">
+            <p class="fw-bold text-center" style="font-size: 25px; color: rgb(91, 93, 94);">This charity's score is 97.22, earning it a 4-Star rating. Donors can "Give with Confidence" to this charity.</p> 
+        </div>
+      </div>
+    </div>
+    <div style="height: 300px;" class="mt-5 d-flex align-items-center justify-content-center flex-column bg-light col-sm-12 col-3">
+        <div style="height: 200px; width: 900px;" class="d-flex align-items-center justify-content-center">
+          <p class="fw-bold text-center" style="font-size: 25px; color: rgb(114, 115, 116);">Home for Families believes that every families deserves and has the right to housing, economic and educational stability.</p> 
+        </div>
+    </div>
+    <div style="height: 500px; background-color: rgb(235, 237, 236);" class="mt-5 d-flex align-items-center justify-content-center flex-column col-sm-12 col-4">
+        <img src="./static/css/images/homestats.jpeg" alt="" width="1000px" height="300px" class="me-5">
+        <div class="d-flex align-items-center mt-5">
+            <h3 class="fs-4 text-center" style="color:rgb(91, 93, 94);">You can empower and give hope to homeless families in Central Ohio by making a donation to Home for Families.</h3>
+        </div>
+    </div>
+    <div style="height: 300px;" class="mt-5 d-flex align-items-center justify-content-center col-sm-12 col-4">
+        <img src="./static/css/images/homeimpact.jpeg" alt="" width="1400px" height="300px">
+    </div>
+    <div class="d-flex justify-content-center py-5">
+      <button class="form-control bg-white fw-bold  border-dark" style="width:130px; font-size: 20px;"><a class="text-dark text-decoration-none" href="/charitylists">DONATE</a></button>
+    </div>
+</div>
+
+{% endblock %}
