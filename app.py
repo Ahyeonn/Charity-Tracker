@@ -13,7 +13,7 @@ commentshome = db.commentshome
 
 app = Flask(__name__)
 
-@app.route('/charitylists')
+@app.route('/')
 def charity_index():
     """Show all charitylists"""
     return render_template('donation.html')
@@ -211,3 +211,6 @@ def homecomments_new():
 def homecomments_delete(comment_id):
     commentshome.delete_one({'_id': ObjectId(comment_id)})
     return redirect(url_for('home_show', home_id=request.form.get('home_id')))
+
+if __name__ == '__main__':
+  app.run(debug=True)  
