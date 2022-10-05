@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request, redirect, url_for
 from pymongo import MongoClient
 from bson.objectid import ObjectId
+import os
 
 # Mongodb
-client = MongoClient()
-db = client.CharityTracker
+uri = os.environ.get('MONGODB_URI','mongodb://localhost/CharityTracker')
+client = MongoClient(uri)
+db = client.get_default_database()
 feeds = db.feeds
 animals = db.animals
 homes = db.homes
@@ -214,4 +216,4 @@ def homecomments_delete(comment_id):
     return redirect(url_for('home_show', home_id=request.form.get('home_id')))
 
 if __name__ == '__main__':
-  app.run(debug=True)  
+  app.run(debug=True, port=5000)  
