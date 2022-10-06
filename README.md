@@ -17,3 +17,6 @@ docker run -p 5000:5000 charitytracker
   https://charitytracker2.herokuapp.com/
 - Caprover (Deployed with Docker):
   https://charity-app.dev.ahyeonjeon.tech/
+
+# Status page for the Caprover website
+https://students-494650270893926078.freshping.io/status
