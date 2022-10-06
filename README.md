@@ -19,4 +19,4 @@ docker run -p 5000:5000 charitytracker
   https://charity-app.dev.ahyeonjeon.tech/
 
 # Status page for the Caprover website
-https://students-494650270893926078.freshping.io/status
+- https://statuspage.freshping.io/63357-ACS32202022Status
